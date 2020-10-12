@@ -30,11 +30,7 @@ public class Person {
         return fn;
     }
     
-    public LocalDate getDate() {
-        return LocalDate.now();
-    }
-    
     public int getAge() {
-        return Period.between(fn, getDate()).getYears();
+        return Period.between(fn, LocalDate.now()).getYears();
     }
 }
